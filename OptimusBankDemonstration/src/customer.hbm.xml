@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="edu.javalearn.domain.bankmodel.Customer"
+		table="Customer_Table">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="customerName"></property>
+		<property name="gender"></property>
+		<property name="dateOfBirth"></property>
+		<property name="address"></property>
+		<property name="city"></property>
+		<property name="state"></property>
+		<property name="pin"></property>
+		<property name="telephoneNo"></property>
+		<property name="fax"></property>
+		<property name="email"></property>
+
+		<!--  <bag name="account" cascade="all">
+			<key column="customerId"></key>
+			<one-to-many class="edu.javalearn.domain.bankmodel.Account" />
+		</bag> 
+<bag name="bankTransaction" cascade="all">
+			<key column="customerId"></key>
+			<one-to-many class="edu.javalearn.domain.bankmodel.BankTransaction" />
+		</bag> -->
+	</class>
+<!-- 
+	<class name="edu.javalearn.domain.bankmodel.Account"
+		table="Account_Table">
+		<id name="accountNo">
+			<generator class="increment"></generator>
+		</id>
+		
+		<property name="typeOfAccount"></property>
+		<property name="balance"></property>
+		 <bag name="bankTransactions" cascade="all">
+			<key column="accountNo"></key>
+			<one-to-many class="edu.javalearn.domain.bankmodel.BankTransaction" />
+		</bag> 
+	</class>
+-->
+<!-- <class name="edu.javalearn.domain.hibernatemodel.BankTransaction"
+		table="Transaction_Table">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="amount"></property>
+		<property name="typeOfAccount"></property>
+		<property name="dateOfTransaction"></property>
+	</class>
+-->
+</hibernate-mapping>  
